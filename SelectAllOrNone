@@ -1,0 +1,17 @@
+function selectAll(ele){
+	$("input[name='cbox']").each(function(){
+		if($(ele).prop("checked")){
+			$(this).prop("checked",true);
+		}else{
+			$(this).prop("checked", false);
+		}
+	})
+}
+
+$("input[name='cbox']").click(function(){
+		if ($("input[name='cbox']:checked").length == $("input[name='cbox']").length){
+			$("input[name='selectAll']").prop("checked", true);
+		}else{
+			$("input[name='selectAll']").prop("checked", false);
+		}
+	})
